@@ -1,12 +1,7 @@
 .color-nav {
-    background-color: hsl(22, 90%, 51%);
+    background: rgba(255, 255, 255, 0);
 }
 
 .intro {
-    background-color: rgb(253, 246, 242);
     height: calc(95vh);
-}
-
-.intro h1 {
-    text-align: center;
 }

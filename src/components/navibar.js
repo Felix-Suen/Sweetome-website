@@ -4,8 +4,8 @@ import './custom.css';
 
 class Navibar extends React.Component {
     render() {
-        return(
-            <Navbar collapseOnSelect expand="lg" className="color-nav" variant="dark">
+        return (
+            <Navbar collapseOnSelect expand="lg" className="color-nav" variant="dark" fixed="top">
                 <Navbar.Brand href="#home">Sweetome Rental</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
