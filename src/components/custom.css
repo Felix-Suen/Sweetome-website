@@ -1,23 +1,24 @@
 .color-nav {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .intro {
-    height: 95vh;
+    height: 100vh;
     text-align: center;
 }
 
 .about {
     height: 100vh;
     text-align: center;
+    background-color: rgb(221, 114, 26);
 }
 
-.contact {
+.agent {
     height: 100vh;
     text-align: center;
 }
 
-.agent {
+.contact {
     height: 100vh;
     text-align: center;
 }
