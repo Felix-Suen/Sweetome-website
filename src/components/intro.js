@@ -5,7 +5,7 @@ import './custom.css';
 class Intro extends React.Component {
     render() {
         return (
-            <div className="intro">
+            <div className="intro" id="intro">
                 <Carousel>
                     <Carousel.Item>
                         <img
