@@ -10,15 +10,19 @@
 .about {
     height: 100vh;
     text-align: center;
-    background-color: rgb(221, 114, 26);
+    background-image: linear-gradient(#a85502, #ef8319);
+    padding-top: 10vh;
+    color: white;
 }
 
 .agent {
     height: 100vh;
     text-align: center;
+    padding-top: 10vh;
 }
 
 .contact {
     height: 100vh;
     text-align: center;
+    padding-top: 10vh;
 }
