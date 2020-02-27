@@ -8,11 +8,25 @@
 }
 
 .about {
-    height: 100vh;
+    height: 110vh;
+    width: 100%;
     text-align: center;
     background-image: linear-gradient(#a85502, #ef8319);
-    padding-top: 10vh;
+    padding-top: 20vh;
     color: white;
+}
+
+.about h1 {
+    font-size: 72px;
+    font-family: Helvetica, Sans-Serif;
+}
+
+.textbox {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 600px;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px 50px 30px;
 }
 
 .agent {
