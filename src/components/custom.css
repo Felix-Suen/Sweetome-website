@@ -1,3 +1,13 @@
+h1 {
+    font-size: 60px;
+    font-family: Helvetica, Sans-Serif;
+}
+
+p {
+    font-size: 20px;
+    font-family: Helvetica, Sans-Serif;
+}
+
 .color-nav {
     background: rgba(255, 255, 255, 0.15);
 }
@@ -8,23 +18,19 @@
 }
 
 .about {
-    height: 110vh;
+    height: auto;
     width: 100%;
     text-align: center;
     background-image: linear-gradient(#a85502, #ef8319);
-    padding-top: 20vh;
+    padding: 20vh 0px;
     color: white;
-}
-
-.about h1 {
-    font-size: 72px;
-    font-family: Helvetica, Sans-Serif;
 }
 
 .textbox {
     background-color: rgba(255, 255, 255, 0.15);
-    width: 600px;
+    width: auto;
     display: inline-block;
+    margin: 0px calc(10vw);
     padding: 30px;
     border-radius: 15px 50px 30px;
 }
