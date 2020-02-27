@@ -10,8 +10,8 @@ class Map extends Component {
     super(props);
     this.state = {
       viewport: {
-        latitude: 43.1,
-        longitude: -79.02,
+        latitude: 49.2,
+        longitude: -123.1207,
         zoom: 10,
         bearing: 0,
         pitch: 0
@@ -28,7 +28,7 @@ class Map extends Component {
                 {...this.state.viewport}
                 width="80vw"
                 height="60vh"
-                mapStyle="mapbox://styles/hbooboo/ck75cu3px410a1iqkhbpmvk7l"
+                mapStyle="mapbox://styles/mapbox/streets-v8"
                 onViewportChange={viewport => this.setState({viewport})}
                 mapboxApiAccessToken={MAPBOX_TOKEN}>
                 {guides.map(guide => (
@@ -47,9 +47,10 @@ class Map extends Component {
                     longitude={this.state.selectedTour.longitude}
                     onClose={() => 
                         this.setState({ setSelectedTour: null, selectedTour: null })}>
-                        <div>
-                            <h2>{this.state.selectedTour.firstName} {this.state.selectedTour.lastName}</h2>
-                            <p>Phone: {this.state.selectedTour.contact}</p>
+                        <div className="map-popup">
+                            <h4>{this.state.selectedTour.lastName}</h4>
+                            <h4>{this.state.selectedTour.firstName} </h4>
+                            <p>Phone Number: {this.state.selectedTour.contact}</p>
                         </div>
                     </Popup>
                 ) : null}
@@ -59,5 +60,5 @@ class Map extends Component {
   }
 }
 
-document.body.style.margin = 0;
+document.body.style.margin = 10;
 export default Map

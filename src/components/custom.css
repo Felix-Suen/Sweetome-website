@@ -98,6 +98,11 @@ img {
     text-align: center;
 }
 
+.map-popup {
+    color: #da6e03;
+    line-height: 1;
+}
+
 .center {
     display: inline-block; 
     margin: 0 auto;
