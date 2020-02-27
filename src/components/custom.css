@@ -54,9 +54,23 @@ img {
 }
 
 .agent {
-    height: 100vh;
+    height: auto;
+    width: 100%;
     text-align: center;
-    padding-top: 10vh;
+    padding: 10vh 0px;
+    background-color: #da6e03;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+.card-deck {
+    display: inline-block; 
+    margin: 0 auto;
+    padding: 3px;
 }
 
 .contact {
@@ -89,5 +103,5 @@ img {
 }
 
 @media(max-width: 700px) {
-    body {display: none;}
+    
 }
