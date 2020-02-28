@@ -51,7 +51,6 @@ img {
 
 .about {
     height: auto;
-    width: 100%;
     text-align: center;
     background-color: #ebe8e6;
     padding: 10vh 0px 10vh;
@@ -130,5 +129,9 @@ img {
 @media(max-width: 700px) {
     .map {
         display: none;
+    }
+
+    .textbox {
+        margin: 0px calc(10vw);
     }
 }
