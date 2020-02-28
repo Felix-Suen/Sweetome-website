@@ -22,7 +22,7 @@ class About extends React.Component {
                     </div>
                 </ScrollAnimation>
                 <br />
-                <ScrollAnimation animateIn="fadeIn" delay={700} animateOnce='true'>
+                <ScrollAnimation animateIn="fadeIn" delay={600} animateOnce='true'>
                     <div className="textbox">
                         <div class="row no-gutters">
                             <div class="col-12 col-sm-6 col-md-8">

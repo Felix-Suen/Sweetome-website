@@ -31,8 +31,12 @@ img {
 /* navbar */
 
 .color-nav {
-    background: #ebe8e6;
     height: 50px;
+    z-index: 999;
+}
+
+.responsive-nav {
+    width: 100vw;
 }
 
 /* carousel intro */
@@ -78,7 +82,7 @@ img {
 .card-deck {
     display: inline-block; 
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 40px 10px;
 }
 
 /* contact and map */
