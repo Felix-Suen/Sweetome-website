@@ -1,14 +1,14 @@
 /* general css */
 
 h1 {
-    font-family: Arial, Helvetica, Sans-Serif;
+    font-family: "Roboto",sans-serif;
     color: rgb(112, 112, 112);
     font-size: 20px;
 }
 
 p {
     font-size: 20px;
-    font-family: Arial, Helvetica, Sans-Serif;
+    font-family: "Roboto",sans-serif;
     line-height: 1.5;
 }
 
@@ -45,7 +45,6 @@ img {
     text-align: center;
     background-color: #ebe8e6;
     height: auto;
-    min-height: 50vh;
 }
 
 /* Our Journey */
@@ -106,8 +105,15 @@ img {
 
 .center {
     display: inline-block; 
-    margin: 0 auto;
-    padding: 3px;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 17px;
+    line-height: 0.5;
 }
 
 /* footer */
@@ -122,5 +128,7 @@ img {
 /* mobile css */
 
 @media(max-width: 700px) {
-    
+    .map {
+        display: none;
+    }
 }
