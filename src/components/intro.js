@@ -1,6 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './custom.css';
+import carousel_1 from '../images/carousel_1.jpg';
+import carousel_2 from '../images/carousel_2.jpg';
+import carousel_3 from '../images/carousel_3.jpg';
 
 class Intro extends React.Component {
     render() {
@@ -10,9 +13,9 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            src={carousel_1}
                             alt="First slide"
-                            style={{width:'100vw', height:'100vh'}}
+                            
                         />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
@@ -22,9 +25,8 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            src={carousel_2}
                             alt="Third slide"
-                            style={{width:'100vw', height:'100vh'}}
                         />
 
                         <Carousel.Caption>
@@ -35,9 +37,8 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            src={carousel_3}
                             alt="Third slide"
-                            style={{width:'100vw', height:'100vh'}}
                         />
 
                         <Carousel.Caption>

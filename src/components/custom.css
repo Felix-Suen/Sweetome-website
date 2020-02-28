@@ -31,9 +31,9 @@ img {
 }
 
 .intro {
-    max-height: 100vh;
     text-align: center;
     background-color: #ef8319;
+    height: auto;
 }
 
 .about {
