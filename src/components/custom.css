@@ -138,6 +138,7 @@ img {
     }
 
     .textbox {
-        margin: 0px calc(10vw);
+        padding: none;
+        margin: none;
     }
 }
