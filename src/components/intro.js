@@ -10,7 +10,7 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://wallpapercave.com/wp/wp4183789.jpg"
+                            src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                             alt="First slide"
                             style={{width:'100vw', height:'100vh'}}
                         />
@@ -22,7 +22,7 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://images6.alphacoders.com/390/thumb-1920-390827.jpg"
+                            src="https://images.pexels.com/photos/373548/pexels-photo-373548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                             alt="Third slide"
                             style={{width:'100vw', height:'100vh'}}
                         />
@@ -35,7 +35,7 @@ class Intro extends React.Component {
                     <Carousel.Item>
                         <img
                             className="d-block w-100 reso"
-                            src="https://wifinowevents.s3.amazonaws.com/uploads/2018/01/CityofVancouver.jpg"
+                            src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                             alt="Third slide"
                             style={{width:'100vw', height:'100vh'}}
                         />

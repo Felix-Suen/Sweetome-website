@@ -17,8 +17,8 @@ class Agent extends React.Component {
                                 <div className="col-sm-4">
                                     <Card className="card">
                                         <Card.Img variant="top" src="https://www.clipartkey.com/mpngs/m/198-1988954_staff-profile-photo-facebook-blank-profile-picture-male.png" />
-                                        <Card.Body style={{ background: '#ff6200' }}>
-                                            <Card.Title>Card title</Card.Title>
+                                        <Card.Body style={{ background: '#ef8319' }}>
+                                            <Card.Title style={{ color: '#fff' }}>Card title</Card.Title>
                                             <Card.Text style={{ color: '#fff' }}>
                                                 This is a wider card with supporting text below as a natural lead-in to
                                                 additional content. This content is a little bit longer.
@@ -29,8 +29,8 @@ class Agent extends React.Component {
                                 <div className="col-sm-4">
                                     <Card className="card">
                                         <Card.Img variant="top" src="https://www.clipartkey.com/mpngs/m/198-1988954_staff-profile-photo-facebook-blank-profile-picture-male.png" />
-                                        <Card.Body style={{ background: '#ff6200' }}>
-                                            <Card.Title>Card title</Card.Title>
+                                        <Card.Body style={{ background: '#ef8319' }}>
+                                            <Card.Title style={{ color: '#fff' }}>Card title</Card.Title>
                                             <Card.Text style={{ color: '#fff' }}>
                                                 This is a wider card with supporting text below as a natural lead-in to
                                                 additional content. This content is a little bit longer.
@@ -41,8 +41,8 @@ class Agent extends React.Component {
                                 <div className="col-sm-4">
                                     <Card className="card">
                                         <Card.Img variant="top" src="https://www.clipartkey.com/mpngs/m/198-1988954_staff-profile-photo-facebook-blank-profile-picture-male.png" />
-                                        <Card.Body style={{ background: '#ff6200' }}>
-                                            <Card.Title>Card title</Card.Title>
+                                        <Card.Body style={{ background: '#ef8319' }}>
+                                            <Card.Title style={{ color: '#fff' }}>Card title</Card.Title>
                                             <Card.Text style={{ color: '#fff' }}>
                                                 This is a wider card with supporting text below as a natural lead-in to
                                                 additional content. This content is a little bit longer.
