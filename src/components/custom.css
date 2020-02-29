@@ -24,7 +24,7 @@ img {
     }
 
     p {
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 
@@ -140,5 +140,9 @@ img {
     .textbox {
         padding: none;
         margin: none;
+    }
+
+    .about-box {
+        margin: 0px calc(5vw);
     }
 }
