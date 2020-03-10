@@ -14,7 +14,7 @@ class Contact extends React.Component {
                 </div>
                 <div className='contact-info'>
                     <p>604-233-0508</p>
-                    <p><a>sweetomevancouver@gmail.com</a></p>
+                    <p><a href="mailto:sweetomevancouver@gmail.com?Subject=Website%20inquiry" target="_top">sweetomevancouver@gmail.com</a></p>
                     <p>Unit 218 - 2688 Shell Road, Richmond, BC</p>
                 </div>
             </div>
