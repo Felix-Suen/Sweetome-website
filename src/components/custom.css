@@ -39,6 +39,15 @@ img {
     width: 100vw;
 }
 
+.btn-orange{
+    background: #da6e03;
+}
+
+/* service */
+.error-txt {
+    color: red;
+}
+
 /* carousel intro */
 
 .intro {

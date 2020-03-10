@@ -16,11 +16,12 @@ class Service extends React.Component {
         super(props);
         this.state = {
             fullName: null,
+            type: null,
             email: null,
             phone: null,
             errors: {
                 fullName: '',
-                email: 'We will respond within 2 business days',
+                email: '-',
                 phone: '',
             }
         };
@@ -70,7 +71,7 @@ class Service extends React.Component {
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-vcenter">
+                    <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
                         Service Request
                         </Modal.Title>
                 </Modal.Header>
@@ -80,7 +81,7 @@ class Service extends React.Component {
                             <Form.Group as={Col} controlId="formPlaintextEmail">
                                 <Form.Label>Full Name</Form.Label>
                                 <Form.Control type="text" name='fullName' placeHolder="Enter Full Name" onChange={this.handleChange} noValidate />
-                                <Form.Text className="text-muted">
+                                <Form.Text className="error-txt" >
                                     {errors.fullName.length > 0 &&
                                         <span className='error'>{errors.fullName}</span>}
                                 </Form.Text>
@@ -100,7 +101,7 @@ class Service extends React.Component {
                             <Form.Group as={Col} controlId="formBasicEmail">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control type="text" name='email' placeHolder="Enter Email" onChange={this.handleChange} noValidate />
-                                <Form.Text className="text-muted">
+                                <Form.Text className="error-txt">
                                     {errors.email.length > 0 &&
                                         <span className='error'>{errors.email}</span>}
                                 </Form.Text>
@@ -112,7 +113,7 @@ class Service extends React.Component {
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
-                            <Button variant="primary" type="submit">
+                            <Button variant="orange" type="submit">
                                 Submit
                             </Button>
                         </Form.Row>
