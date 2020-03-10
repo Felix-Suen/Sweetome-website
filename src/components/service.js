@@ -23,7 +23,8 @@ class Service extends React.Component {
                 fullName: '',
                 email: '-',
                 phone: '',
-            }
+            },
+            containsErr: true
         };
     }
 
@@ -55,6 +56,7 @@ class Service extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         if (validateForm(this.state.errors)) {
+            this.setState({containsErr: false});
             console.info('Valid Form')
         } else {
             console.error('Invalid Form')
@@ -63,64 +65,86 @@ class Service extends React.Component {
 
     render() {
         const { errors } = this.state;
-        return (
-            <Modal
-                {...this.props}
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-            >
-                <Modal.Header closeButton>
-                    <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
-                        Service Request
-                        </Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form onSubmit={this.handleSubmit} noValidate>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formPlaintextEmail">
-                                <Form.Label>Full Name</Form.Label>
-                                <Form.Control type="text" name='fullName' placeHolder="Enter Full Name" onChange={this.handleChange} noValidate />
-                                <Form.Text className="error-txt" >
-                                    {errors.fullName.length > 0 &&
-                                        <span className='error'>{errors.fullName}</span>}
-                                </Form.Text>
+        if (this.state.containsErr === true) {
+            return (
+                <Modal
+                    {...this.props}
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
+                            Service Request
+                            </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form onSubmit={this.handleSubmit} noValidate>
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="formPlaintextEmail">
+                                    <Form.Label>Full Name</Form.Label>
+                                    <Form.Control type="text" name='fullName' placeHolder="Enter Full Name" onChange={this.handleChange} noValidate />
+                                    <Form.Text className="error-txt" >
+                                        {errors.fullName.length > 0 &&
+                                            <span className='error'>{errors.fullName}</span>}
+                                    </Form.Text>
+                                </Form.Group>
+                            </Form.Row>
+    
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Select Property Type</Form.Label>
+                                <Form.Control as="select">
+                                    <option>Full Condo</option>
+                                    <option>House</option>
+                                    <option>Studio</option>
+                                </Form.Control>
                             </Form.Group>
-                        </Form.Row>
-
-                        <Form.Group controlId="exampleForm.ControlSelect1">
-                            <Form.Label>Select Property Type</Form.Label>
-                            <Form.Control as="select">
-                                <option>Full Condo</option>
-                                <option>House</option>
-                                <option>Studio</option>
-                            </Form.Control>
-                        </Form.Group>
-
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formBasicEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="text" name='email' placeHolder="Enter Email" onChange={this.handleChange} noValidate />
-                                <Form.Text className="error-txt">
-                                    {errors.email.length > 0 &&
-                                        <span className='error'>{errors.email}</span>}
-                                </Form.Text>
-                            </Form.Group>
-
-                            <Form.Group as={Col} controlId="">
-                                <Form.Label>Contact Number (Optional)</Form.Label>
-                                <Form.Control type="text" name='phone' placeHolder="Enter Phone Number" onChange={this.handleChange} noValidate />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Row>
-                            <Button variant="orange" type="submit">
-                                Submit
-                            </Button>
-                        </Form.Row>
-                    </Form>
-                </Modal.Body>
-            </Modal>
-        );
+    
+                            <Form.Row>
+                                <Form.Group as={Col} controlId="formBasicEmail">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control type="text" name='email' placeHolder="Enter Email" onChange={this.handleChange} noValidate />
+                                    <Form.Text className="error-txt">
+                                        {errors.email.length > 0 &&
+                                            <span className='error'>{errors.email}</span>}
+                                    </Form.Text>
+                                </Form.Group>
+    
+                                <Form.Group as={Col} controlId="">
+                                    <Form.Label>Contact Number (Optional)</Form.Label>
+                                    <Form.Control type="text" name='phone' placeHolder="Enter Phone Number" onChange={this.handleChange} noValidate />
+                                </Form.Group>
+                            </Form.Row>
+                            <Form.Row>
+                                <Button variant="orange" type="submit">
+                                    Submit
+                                </Button>
+                            </Form.Row>
+                            <p>{this.state.containsErr}</p>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
+            );
+        } else {
+            return(
+                <Modal
+                    {...this.props}
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
+                            Service Request
+                            </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Your request has been saved. It will be processed within the next two business days.
+                    </Modal.Body>
+                </Modal>
+            );
+        }
+        
     }
 }
 
