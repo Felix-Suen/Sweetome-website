@@ -1,6 +1,7 @@
 import React from 'react';
 import './custom.css';
 import { Modal, Form, Col, Button } from 'react-bootstrap';
+import emailjs from 'emailjs-com';
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 const validateForm = (errors) => {
@@ -16,9 +17,10 @@ class Service extends React.Component {
         super(props);
         this.state = {
             fullName: null,
-            type: null,
             email: null,
             phone: null,
+            type: null,
+            comments: null,
             errors: {
                 fullName: '',
                 email: '-',
@@ -55,9 +57,25 @@ class Service extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+
+        var emails = {
+            fullName: this.state.fullName,
+            email: this.state.email,
+            phone: this.state.phone,
+            type: this.state.type,
+            comments: this.state.comments
+        };
+
         if (validateForm(this.state.errors)) {
-            this.setState({containsErr: false});
+            this.setState({ containsErr: false });
             console.info('Valid Form')
+            console.log(this.state.fullName + " " + this.state.email + " " + this.state.type + " " + this.state.comments);
+            emailjs.send('gmail', 'sweetome_bot', emails, 'user_jauthrTvRjb0Bc9b2Boug')
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
         } else {
             console.error('Invalid Form')
         }
@@ -74,7 +92,7 @@ class Service extends React.Component {
                     centered
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
+                        <Modal.Title id="contained-modal-title-vcenter" style={{ color: "#da6e03" }}>
                             Service Request
                             </Modal.Title>
                     </Modal.Header>
@@ -90,16 +108,7 @@ class Service extends React.Component {
                                     </Form.Text>
                                 </Form.Group>
                             </Form.Row>
-    
-                            <Form.Group controlId="exampleForm.ControlSelect1">
-                                <Form.Label>Select Property Type</Form.Label>
-                                <Form.Control as="select">
-                                    <option>Full Condo</option>
-                                    <option>House</option>
-                                    <option>Studio</option>
-                                </Form.Control>
-                            </Form.Group>
-    
+
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formBasicEmail">
                                     <Form.Label>Email</Form.Label>
@@ -109,12 +118,30 @@ class Service extends React.Component {
                                             <span className='error'>{errors.email}</span>}
                                     </Form.Text>
                                 </Form.Group>
-    
+
                                 <Form.Group as={Col} controlId="">
-                                    <Form.Label>Contact Number (Optional)</Form.Label>
+                                    <Form.Label>Number (Optional)</Form.Label>
                                     <Form.Control type="text" name='phone' placeHolder="Enter Phone Number" onChange={this.handleChange} noValidate />
                                 </Form.Group>
                             </Form.Row>
+
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Select Property Type</Form.Label>
+                                <Form.Control as="select" name="type" onChange={this.handleChange} noValidate>
+                                    <option value="Condo">Condo</option>
+                                    <option value="House">House</option>
+                                    <option value="Studio">Studio</option>
+                                    <option value="Studio">Others</option>
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Row>
+                                <Form.Group as={Col}>
+                                    <Form.Label>Comments or Requests</Form.Label>
+                                    <Form.Control as="textarea" rows="3" name="comments" onChange={this.handleChange} />
+                                </Form.Group>
+                            </Form.Row>
+
                             <Form.Row>
                                 <Button variant="orange" type="submit">
                                     Submit
@@ -126,7 +153,7 @@ class Service extends React.Component {
                 </Modal>
             );
         } else {
-            return(
+            return (
                 <Modal
                     {...this.props}
                     size="lg"
@@ -134,7 +161,7 @@ class Service extends React.Component {
                     centered
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-vcenter" style={{color: "#da6e03"}}>
+                        <Modal.Title id="contained-modal-title-vcenter" style={{ color: "#da6e03" }}>
                             Service Request
                             </Modal.Title>
                     </Modal.Header>
@@ -144,7 +171,7 @@ class Service extends React.Component {
                 </Modal>
             );
         }
-        
+
     }
 }
 
