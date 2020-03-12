@@ -1,7 +1,6 @@
 import React from 'react';
 import './custom.css';
 import { Modal, Form, Col, Button } from 'react-bootstrap';
-import axios from 'axios';
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 const validateForm = (errors) => {
@@ -56,18 +55,13 @@ class Service extends React.Component {
         this.setState({ errors, [name]: value });
     }
 
-    async handleSubmit(event) {
+    handleSubmit(event) {
         event.preventDefault();
-        const { fullName, type, email, phone } = this.state;
         if (validateForm(this.state.errors)) {
             this.setState({containsErr: false});
             console.info('Valid Form')
-            const form = await axios.post('/api/form', {
-                fullName,
-                type,
-                email,
-                phone
-            });
+            console.log(this.state.fullName);
+
         } else {
             console.error('Invalid Form')
         }
