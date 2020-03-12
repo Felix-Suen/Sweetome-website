@@ -28,6 +28,8 @@ class Service extends React.Component {
             },
             containsErr: true
         };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = (event) => {
@@ -55,7 +57,7 @@ class Service extends React.Component {
         this.setState({ errors, [name]: value });
     }
 
-    handleSubmit = (event) => {
+    handleSubmit(event) {
         event.preventDefault();
 
         var emails = {
@@ -69,6 +71,7 @@ class Service extends React.Component {
         if (validateForm(this.state.errors)) {
             this.setState({ containsErr: false });
             console.info('Valid Form')
+<<<<<<< HEAD
             console.log(this.state.fullName + " " + this.state.email + " " + this.state.type + " " + this.state.comments);
             emailjs.send('gmail', 'sweetome_bot', emails, 'user_jauthrTvRjb0Bc9b2Boug')
                 .then((response) => {
@@ -76,6 +79,10 @@ class Service extends React.Component {
                 }, (err) => {
                     console.log('FAILED...', err);
                 });
+=======
+            console.log(this.state.fullName);
+
+>>>>>>> 3f341e65341c5928e2fb49e587c094b615eabd29
         } else {
             console.error('Invalid Form')
         }
