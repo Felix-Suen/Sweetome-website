@@ -128,7 +128,7 @@ class Service extends React.Component {
                             </Form.Row>
 
                             <Form.Group controlId="exampleForm.ControlSelect1">
-                                <Form.Label>Select Property Type</Form.Label>
+                                <Form.Label>Select Rental Property Type</Form.Label>
                                 <Form.Control as="select" name="type" onChange={this.handleChange} noValidate>
                                     <option value="Condo">Condo</option>
                                     <option value="House">House</option>
