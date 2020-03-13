@@ -3,6 +3,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from "react-scroll";
 import Service from './service';
 import './custom.css';
+import sweetome from '../images/sweetome.png';
 
 class Navibar extends React.Component {
     constructor(...args) {
@@ -19,7 +20,13 @@ class Navibar extends React.Component {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    style={{ color: '#ef8319' }}><b>Sweetome Rental</b></Link></Navbar.Brand>
+                    style={{ color: '#ef8319' }}>
+                        <img
+                            src={sweetome}
+                            style={{width: '180px', height: '45px'}}
+                            alt="logo"
+                        />
+                    </Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className='responsive-nav'>
                     <Nav className="mr-auto">
