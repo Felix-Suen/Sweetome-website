@@ -3,7 +3,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from "react-scroll";
 import Service from './service';
 import './custom.css';
-import sweetome from '../images/sweetome.png';
+import sweetome from '../../images/sweetome.png';
 
 class Navibar extends React.Component {
     constructor(...args) {

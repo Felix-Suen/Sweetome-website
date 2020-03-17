@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MapGL, { Marker, Popup } from 'react-map-gl';
-import guides from '../data/guides.json';
-import '../App.css';
+import guides from '../../data/guides.json';
+import '../../App.css';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiaGJvb2JvbyIsImEiOiJjazYzYmUyeWEwNmNiM2xwZzd5NDg5ajljIn0.F5tgToY70jIZEN0jB51zJQ'; // Set your mapbox token here
 

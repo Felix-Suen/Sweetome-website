@@ -1,23 +1,17 @@
 import React from 'react';
-import './App.css';
-import Navibar from './components/navibar';
-import Intro from './components/intro';
-import About from './components/about';
-import Contact from './components/contact';
-import Agent from './components/agent';
-import Footer from './components/footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/home/home.js';
+import Listings from './components/listings/listings.js';
 
 class App extends React.Component {
     render() {
-        return(
-            <div>
-                <Navibar />
-                <Intro />
-                <About />
-                <Agent />
-                <Contact />
-                <Footer />
-            </div>
+        return (
+            <Router>
+                <Switch>
+                    <Route path='/' exact component={Home} />
+                    <Route path='/listings' component={Listings} />
+                </Switch>
+            </Router>
         );
     }
 }

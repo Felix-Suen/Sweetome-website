@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './custom.css';
-import carousel_1 from '../images/carousel_1.jpg';
-import carousel_2 from '../images/carousel_2.jpg';
-import carousel_3 from '../images/carousel_3.jpg';
+import carousel_1 from '../../images/carousel_1.jpg';
+import carousel_2 from '../../images/carousel_2.jpg';
+import carousel_3 from '../../images/carousel_3.jpg';
 
 class Intro extends React.Component {
     render() {
