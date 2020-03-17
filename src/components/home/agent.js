@@ -1,5 +1,5 @@
 import React from 'react';
-import './custom.css';
+import './home.css';
 import { Card, CardDeck } from 'react-bootstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
 

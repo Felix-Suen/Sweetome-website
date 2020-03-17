@@ -1,5 +1,5 @@
 import React from 'react';
-import './custom.css';
+import './home.css';
 import { Modal, Form, Col, Button } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 

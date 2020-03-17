@@ -1,5 +1,5 @@
 import React from 'react';
-import './custom.css';
+import './home.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 class About extends React.Component {

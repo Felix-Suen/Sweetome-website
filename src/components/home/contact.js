@@ -1,5 +1,5 @@
 import React from 'react';
-import './custom.css';
+import './home.css';
 import Map from './map';
 
 class Contact extends React.Component {
