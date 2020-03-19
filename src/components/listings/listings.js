@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from './firebase';
 import { Link } from 'react-router-dom';
+import Navibar from './navibar';
 
 class Listings extends React.Component {
     constructor(props) {
@@ -27,13 +28,16 @@ class Listings extends React.Component {
 
     render() {
         return (
-            <ul>
-                {this.state.listings.map(e => (
-                    <li>
-                        <Link to={`/listings/${e.id}`}>{e.data().address}</Link>
-                    </li>
-                ))}
-            </ul>
+            <div>
+                <Navibar />
+                <ul>
+                    {this.state.listings.map(e => (
+                        <li>
+                            <Link to={`/listings/${e.id}`}><img src={e.data().image} style={{width: "400px", height: "300px"}}></img></Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         );
     }
 }

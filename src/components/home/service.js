@@ -19,7 +19,6 @@ class Service extends React.Component {
             fullName: null,
             email: null,
             phone: null,
-            type: null,
             comments: null,
             errors: {
                 fullName: '',
@@ -64,14 +63,13 @@ class Service extends React.Component {
             fullName: this.state.fullName,
             email: this.state.email,
             phone: this.state.phone,
-            type: this.state.type,
             comments: this.state.comments
         };
 
         if (validateForm(this.state.errors)) {
             this.setState({ containsErr: false });
             console.info('Valid Form')
-            console.log(this.state.fullName + " " + this.state.email + " " + this.state.type + " " + this.state.comments);
+            console.log(this.state.fullName + " " + this.state.email + " " + this.state.comments);
             emailjs.send('gmail', 'sweetome_bot', emails, 'user_jauthrTvRjb0Bc9b2Boug')
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
@@ -126,14 +124,6 @@ class Service extends React.Component {
                                     <Form.Control type="text" name='phone' placeHolder="Enter Phone Number" onChange={this.handleChange} noValidate />
                                 </Form.Group>
                             </Form.Row>
-                            <Form.Group>
-                            ￼￼￼    <Form.Control as="select" name="type" onChange={this.handleChange} noValidate>
-                                    <option value="Condo">Condo</option>
-                                    <option value="House">House</option>
-                                    <option value="Studio">Studio</option>
-                                    <option value="Studio">Others</option>
-                                </Form.Control>
-                            </Form.Group>
 
                             <Form.Row>
                                 <Form.Group as={Col}>

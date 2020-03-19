@@ -1,4 +1,5 @@
 import React from 'react';
+import Navibar from './navibar';
 
 class EachListing extends React.Component {
     constructor(props){
@@ -10,7 +11,11 @@ class EachListing extends React.Component {
 
     render() {
         return(
-            <h1>hello</h1>
+            <div>
+                <Navibar />
+                <h1>hello</h1>
+            </div>
+            
         );
     }
 }
