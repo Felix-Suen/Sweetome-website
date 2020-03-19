@@ -1,5 +1,5 @@
 import React from 'react';
-import Navibar from './navibar';
+import Navibar from './navibar.js';
 import './listings.css';
 
 class EachListing extends React.Component {
