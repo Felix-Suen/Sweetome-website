@@ -1,5 +1,6 @@
 import React from 'react';
 import Navibar from './navibar';
+import './listings.css';
 
 class EachListing extends React.Component {
     constructor(props){

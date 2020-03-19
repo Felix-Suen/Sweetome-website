@@ -30,13 +30,13 @@ class Listings extends React.Component {
         return (
             <div>
                 <Navibar />
-                <ul>
-                    {this.state.listings.map(e => (
-                        <li>
+                {this.state.listings.map(e => (
+                    <div className="container">
+                        <div className="col-sm-4">
                             <Link to={`/listings/${e.id}`}><img src={e.data().image} style={{width: "400px", height: "300px"}}></img></Link>
-                        </li>
-                    ))}
-                </ul>
+                        </div>
+                    </div>
+                ))}
             </div>
         );
     }
