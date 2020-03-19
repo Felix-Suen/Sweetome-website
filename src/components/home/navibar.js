@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from "react-scroll";
+import { Link as Linker} from 'react-router-dom';
 import Service from './service';
 import './home.css';
 import sweetome from '../../images/sweetome.png';
@@ -51,6 +52,9 @@ class Navibar extends React.Component {
                             offset={0}
                             duration={500}
                             style={{ color: '#ef8319' }}>Contact Us</Link></Nav.Link>
+                        <Nav.Link>
+                            <Linker to="/listings" style={{ color: '#ef8319' }}>All Listings</Linker>
+                        </Nav.Link>
                     </Nav>
                     <Nav>
                         <Button

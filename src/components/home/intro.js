@@ -4,6 +4,8 @@ import './home.css';
 import carousel_1 from '../../images/carousel_1.jpg';
 import carousel_2 from '../../images/carousel_2.jpg';
 import carousel_3 from '../../images/carousel_3.jpg';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 class Intro extends React.Component {
     render() {
@@ -17,7 +19,7 @@ class Intro extends React.Component {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
+                            <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -29,7 +31,7 @@ class Intro extends React.Component {
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
+                            <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -41,7 +43,7 @@ class Intro extends React.Component {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
+                            <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
