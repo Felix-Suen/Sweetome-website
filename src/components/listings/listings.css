@@ -21,13 +21,21 @@ img {
 /* listings main page */
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 50px;
+
 }
 
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 30px;
-    text-align: center;
+.about-box {
+    width: auto;
+    display: inline-block;
+    margin: calc(3vh) calc(20vw);
+    padding: 30px;
+    border-radius: 15px 50px 30px;
+    color: rgb(112, 112, 112);
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.textbox {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 0px 20px;
 }

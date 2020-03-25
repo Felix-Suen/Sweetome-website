@@ -1,6 +1,5 @@
 import React from 'react';
 import firebase from './firebase';
-import { Link } from 'react-router-dom';
 import Navibar from './navibar';
 
 class Listings extends React.Component {
@@ -32,8 +31,20 @@ class Listings extends React.Component {
                 <Navibar />
                 <div className="grid-container">
                 {this.state.listings.map(e => (
-                    <div className="grid-item">
-                        <Link to={`/listings/${e.id}`}><img src={e.data().image} style={{width: "400px", height: "300px"}}></img></Link>
+                    <div className="about-box">
+                        <div class="row no-gutters" style={{ textAlign: 'center' }}>
+                            <div class="col-md-4">
+                                <img src={e.data().image} alt="house"></img>
+                            </div>
+                            <div class="col-md-8">
+                                <div className="textbox">
+                                    <h1>{e.data().address}</h1>
+                                    <p>{e.data().bedroom} beds | {e.data().bathroom} baths</p>
+                                    <p>{e.data().price} / Month</p>
+                                    <p>{e.data().description}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ))}
                 </div>
