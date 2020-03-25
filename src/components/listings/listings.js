@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from './firebase';
 import Navibar from './navibar';
+import './listings.css';
 
 class Listings extends React.Component {
     constructor(props) {
@@ -30,23 +31,24 @@ class Listings extends React.Component {
             <div>
                 <Navibar />
                 <div className="grid-container">
-                {this.state.listings.map(e => (
-                    <div className="about-box">
-                        <div class="row no-gutters" style={{ textAlign: 'center' }}>
-                            <div class="col-md-4">
-                                <img src={e.data().image} alt="house"></img>
-                            </div>
-                            <div class="col-md-8">
-                                <div className="textbox">
-                                    <h1>{e.data().address}</h1>
-                                    <p>{e.data().bedroom} beds | {e.data().bathroom} baths</p>
-                                    <p>{e.data().price} / Month</p>
-                                    <p>{e.data().description}</p>
+                    <h1>All Available Listings</h1>
+                    {this.state.listings.map(e => (
+                        <div className="listings-box">
+                            <div class="row no-gutters" style={{ textAlign: 'center' }}>
+                                <div class="col-md-4">
+                                    <img src={e.data().image} alt="house"></img>
+                                </div>
+                                <div class="col-md-8">
+                                    <div className="textbox">
+                                        <h2><b>{e.data().address}</b></h2>
+                                        <p>{e.data().bedroom} beds {e.data().bathroom} baths</p>
+                                        <p>{e.data().price} / Month</p>
+                                        <p>{e.data().description}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
                 </div>
             </div>
         );

@@ -21,21 +21,22 @@ img {
 /* listings main page */
 
 .grid-container {
-
+    text-align: center;
+    padding: calc(5vh);
+    background-color: #ebe8e6;
 }
 
-.about-box {
+.listings-box {
     width: auto;
     display: inline-block;
     margin: calc(3vh) calc(20vw);
     padding: 30px;
-    border-radius: 15px 50px 30px;
     color: rgb(112, 112, 112);
+    border-radius: 15px 50px 30px;
     box-shadow: 5px 10px 18px #888888;
 }
 
 .textbox {
-    text-align: justify;
     text-justify: inter-word;
     padding: 0px 20px;
 }
