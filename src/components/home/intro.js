@@ -20,7 +20,7 @@ class Intro extends React.Component {
                         />
                         <Carousel.Caption>
                             <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
-                            <p>Personalized renting experience with excellent support</p>
+                            <p>Personalized renting experience</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>

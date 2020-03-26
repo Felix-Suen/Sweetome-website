@@ -61,7 +61,7 @@ class Navibar extends React.Component {
                             variant="orange"
                             onClick={() => this.setState({ modalShow: true })}
                         >
-                            Service Request
+                            Rental Inquiries
                         </Button>
 
                         <Service

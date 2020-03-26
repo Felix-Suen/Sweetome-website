@@ -93,7 +93,7 @@ class Service extends React.Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter" style={{ color: "#da6e03" }}>
-                            Service Request
+                            Rental Inquiries
                             </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -152,7 +152,7 @@ class Service extends React.Component {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter" style={{ color: "#da6e03" }}>
-                            Service Request
+                            Rental Inquiries
                             </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
