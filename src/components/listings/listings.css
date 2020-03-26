@@ -36,7 +36,24 @@ img {
     box-shadow: 5px 10px 18px #888888;
 }
 
+.listings-box p {
+    line-height: 1.25;
+    font-size: 17px;
+}
+
 .textbox {
     text-justify: inter-word;
     padding: 0px 20px;
+}
+
+@media(max-width: 700px) {
+
+    .textbox {
+        padding: none;
+        margin: none;
+    }
+
+    .listings-box {
+        margin: 0px calc(5vw);
+    }
 }

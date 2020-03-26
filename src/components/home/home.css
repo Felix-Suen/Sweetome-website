@@ -40,7 +40,7 @@ img {
 }
 
 .btn-orange{
-    background: #da6e03;
+    background: #d27242;
 }
 
 /* service */
@@ -113,7 +113,7 @@ img {
 }
 
 .map-popup {
-    color: #da6e03;
+    color: #DF6C33;
     line-height: 1;
 }
 
@@ -135,7 +135,7 @@ img {
 .footer {
     padding: 1em;
     background: #ebe8e6;
-    color: #ef8319;
+    color: #d27242;
     text-align: left;
 }
 

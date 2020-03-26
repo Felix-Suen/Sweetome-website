@@ -20,7 +20,7 @@ class Intro extends React.Component {
                         />
                         <Carousel.Caption>
                             <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <p>Personalized renting experience with excellent support</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -32,7 +32,7 @@ class Intro extends React.Component {
 
                         <Carousel.Caption>
                             <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Stress free ownership and management</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -44,7 +44,7 @@ class Intro extends React.Component {
 
                         <Carousel.Caption>
                             <Link className="link" to="/listings"><Button  variant="orange">Explore All Listings</Button></Link>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <p>Supervised by our trusted agents</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
