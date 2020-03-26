@@ -20,10 +20,13 @@ img {
 
 /* listings main page */
 
+.listing-background {
+    background-color: #ebe8e6;
+}
+
 .grid-container {
     text-align: center;
     padding: calc(5vh);
-    background-color: #ebe8e6;
 }
 
 .listings-box {
