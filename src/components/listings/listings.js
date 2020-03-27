@@ -18,8 +18,12 @@ class Listings extends React.Component {
             const db = firebase.firestore()
             const data = db.collection('listings').get()
                 .then((snapshot) => {
-                    snapshot.forEach((doc) => { this.setState({ listings: [...this.state.listings, doc],
-                                                                filteredListings: [...this.state.filteredListings, doc] }); })
+                    snapshot.forEach((doc) => {
+                        this.setState({
+                            listings: [...this.state.listings, doc],
+                            filteredListings: [...this.state.filteredListings, doc]
+                        });
+                    })
                 })
                 .catch((err) => {
                     console.log('Error getting documents', err);
@@ -31,19 +35,19 @@ class Listings extends React.Component {
 
     priceFilter(low, up) {
         var temp = [];
-        this.setState({filteredListings: []});
+        this.setState({ filteredListings: [] });
         console.log(this.state.filteredListings)
         for (var i = 0; i < this.state.listings.length; i++) {
             if (this.state.listings[i].data().price >= low && this.state.listings[i].data().price <= up) {
                 console.log(this.state.listings[i].data().address)
                 temp.push(this.state.listings[i])
             }
-            this.setState({filteredListings: temp})
+            this.setState({ filteredListings: temp })
         }
     }
 
     allListings() {
-        this.setState({filteredListings: this.state.listings});
+        this.setState({ filteredListings: this.state.listings });
     }
 
     render() {
@@ -52,6 +56,12 @@ class Listings extends React.Component {
                 <Navibar />
                 <div className="grid-container">
                     <h1>Sweetome Listings</h1>
+
+                    <ButtonGroup>
+                        <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
+                        <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
+                        <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
+                    </ButtonGroup>
 
                     <ButtonGroup>
                         <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
