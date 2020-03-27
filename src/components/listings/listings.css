@@ -60,4 +60,8 @@ img {
     .listings-box {
         margin: 0px calc(5vw);
     }
+
+    .filters {
+        display: none;
+    }
 }

@@ -57,19 +57,23 @@ class Listings extends React.Component {
                 <div className="grid-container">
                     <h1>Sweetome Listings</h1>
 
-                    <ButtonGroup>
-                        <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
-                        <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
-                        <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
-                    </ButtonGroup>
+                    <div className="filters">
+                        <div>
+                            <ButtonGroup>
+                                <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
+                                <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
+                                <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
+                            </ButtonGroup>
 
-                    <ButtonGroup>
-                        <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
-                        <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
-                        <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
-                    </ButtonGroup>
+                            <ButtonGroup>
+                                <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>Vancouver</Button>
+                                <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>Richmond</Button>
+                                <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>Burnaby</Button>
+                            </ButtonGroup>
+                        </div>
 
-                    <Button variant="orange" onClick={() => this.allListings()}>All Listings</Button>
+                        <Button variant="orange" onClick={() => this.allListings()}>All Listings</Button>
+                    </div>
 
                     {this.state.filteredListings.map(e => (
                         <div className="listings-box">
