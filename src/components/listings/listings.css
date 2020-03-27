@@ -44,14 +44,15 @@ img {
     font-size: 17px;
 }
 
-.textbox {
+.listing-text-box {
+    text-align: justify;
     text-justify: inter-word;
     padding: 0px 20px;
 }
 
 @media(max-width: 700px) {
 
-    .textbox {
+    .listing-text-box {
         padding: none;
         margin: none;
     }

@@ -30,11 +30,10 @@ class Listings extends React.Component {
     }
 
     priceFilter(low, up) {
-        var length = this.state.listings.length;
         var temp = [];
         this.setState({filteredListings: []});
         console.log(this.state.filteredListings)
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < this.state.listings.length; i++) {
             if (this.state.listings[i].data().price >= low && this.state.listings[i].data().price <= up) {
                 console.log(this.state.listings[i].data().address)
                 temp.push(this.state.listings[i])
@@ -52,14 +51,12 @@ class Listings extends React.Component {
             <div>
                 <Navibar />
                 <div className="grid-container">
-                    <h1>All Available Listings</h1>
+                    <h1><b>Sweetome Listings</b></h1>
 
-                    <ButtonGroup>
                         <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
                         <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
                         <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
                         <Button variant="orange" onClick={() => this.allListings()}>All Listings</Button>
-                    </ButtonGroup>
 
                     {this.state.filteredListings.map(e => (
                         <div className="listings-box">
@@ -68,7 +65,7 @@ class Listings extends React.Component {
                                     <img src={e.data().image} alt="house"></img>
                                 </div>
                                 <div class="col-md-8">
-                                    <div className="textbox">
+                                    <div className="listing-text-box">
                                         <h2><b>{e.data().address}</b></h2>
                                         <p>{e.data().bedroom} beds {e.data().bathroom} baths</p>
                                         <p>${e.data().price.toLocaleString()} / Month</p>
