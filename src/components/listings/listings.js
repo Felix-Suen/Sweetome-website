@@ -51,12 +51,15 @@ class Listings extends React.Component {
             <div>
                 <Navibar />
                 <div className="grid-container">
-                    <h1><b>Sweetome Listings</b></h1>
+                    <h1>Sweetome Listings</h1>
 
+                    <ButtonGroup>
                         <Button variant="orange" onClick={() => this.priceFilter(0, 1000)}>{"<"}$1000</Button>
                         <Button variant="orange" onClick={() => this.priceFilter(1001, 2000)}>$1000 - $2000</Button>
                         <Button variant="orange" onClick={() => this.priceFilter(2001, 100000)}>$2000+</Button>
-                        <Button variant="orange" onClick={() => this.allListings()}>All Listings</Button>
+                    </ButtonGroup>
+
+                    <Button variant="orange" onClick={() => this.allListings()}>All Listings</Button>
 
                     {this.state.filteredListings.map(e => (
                         <div className="listings-box">
